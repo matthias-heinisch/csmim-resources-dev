@@ -1,0 +1,18 @@
+id: csmim.obj.door.actuated.1
+supertypes: [csmim.obj.door.1]
+description: Interface to a lockable door in the cabin, e.g. of a lavatory.
+             The door contains actuators to open/close and lock/unlock.
+deprecated: false
+resources:
+  # id: state
+  # id: status_msg
+  - id: command
+    mode: x
+    type: void
+    mandatory: false
+    description: Command the door.
+    parameters:
+      - key: cmd
+        type: string
+        description: The command, one of "open", "close", "lock", "unlock"?
+        # TODO: To be improved; allow locking? unlocking?

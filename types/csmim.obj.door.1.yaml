@@ -1,0 +1,26 @@
+id: csmim.obj.door.1
+supertypes: []
+description: Interface to a lockable door in the cabin, e.g. of a lavatory.
+deprecated: false
+attributes:
+  - key: lavatory
+    mandatory: false
+    description: ID of the lavatory, if this is a lavatory door.
+resources:
+  - id: state
+    mode: r
+    type: enum
+    description: State of the door.
+    enum-values:
+      indefinite: 0
+      open: 1
+      closed but not locked: 2
+      closed and locked: 3
+      error: 4
+      # Enums in base types could be declared to be extensible in derived types?
+  - id: status_msg
+    mode: r
+    type: string
+    description:
+      Human-readable status message for the door "system".
+      Intended for display to cabin crew and maintenance crew.

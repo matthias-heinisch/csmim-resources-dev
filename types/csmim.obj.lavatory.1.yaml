@@ -1,0 +1,25 @@
+id: csmim.obj.lavatory.1
+supertypes: []
+description:
+  Interface to a lavatory in the cabin.
+  Contains sub-objects for some lavatory components.
+deprecated: false
+attributes:
+  - key: lavatory
+    description: ID of the lavatory.
+resources:
+  - id: operative
+    mode: r
+    type: bool
+    description: Whether the lavatory is operative (can be used).
+  - id: occupied
+    mode: r
+    type: bool
+    description:
+      Whether the lavatory is occupied currently (door locked from inside).
+  - id: status_msg
+    mode: r
+    type: string
+    description:
+      Human-readable status message for the lavatory.
+      Intended for display to cabin crew and maintenance crew.
